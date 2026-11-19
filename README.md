@@ -1,11 +1,13 @@
-# 18 November 2026 — A day in the world
+[![make.fun](https://make.fun/badge/news-image-20261118.svg)](https://make.fun/bounty/news-image-20261118)
+[![rank](https://make.fun/badge/news-image-20261118/rank.svg)](https://make.fun/bounty/news-image-20261118)
+[![reward](https://make.fun/badge/news-image-20261118/reward.svg)](https://make.fun/bounty/news-image-20261118)
 
-[![make.fun · news-image-20261118](https://make.fun/badge/news-image-20261118.svg)](https://make.fun/bounty/news-image-20261118?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261118)
-[![Rank](https://make.fun/badge/news-image-20261118/Ajihashpangestu/Biawak-newsimg/rank.svg)](https://make.fun/bounty/news-image-20261118?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261118)
-[![Reward](https://make.fun/badge/news-image-20261118/Ajihashpangestu/Biawak-newsimg/reward.svg)](https://make.fun/bounty/news-image-20261118?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261118)
+# World news — Wednesday 18 November 2026
 
-This date-first world news front page packs Wednesday, 18 November 2026 into a single 1024 × 1024 image. It brings together 13 illustrated news cards and 30 briefs. The THE DAY IN NUMBERS band highlights key figures, a pinned world map locates selected stories, and the date-check footer lists items excluded from the edition.
+A one-image world news front page with a date-first giant title and a **THE DAY IN NUMBERS** band containing 8 sourced stats. It features 13 illustrated cards, 30 numbered briefs (14–43), a world map with numbered pins, and story locators.
 
-Run `bash render.sh` to regenerate `entry.png` from the inline SVG in `cand.html`. Run `node main.ts` with a Node version that supports TypeScript to render the image, copy it to `/output/entry.png`, and check the submission size.
+The **DATE CHECK** footer lists stories excluded because they were first reported on 17 November: the Prague train crash and AP's Peltola race call.
 
-The original layout and illustrations are covered by the MIT license. The map outline is derived from Natural Earth.
+Everything is rendered from `cand.html` via headless Chromium. Run `bash render.sh` to regenerate `entry.png`. The renderer captures a 1024×1300 viewport, crops content against the background with a small margin, and resizes with LANCZOS to exactly 1024×1024.
+
+`fit.py` accepts an optional output path (default `entry.png`) and prints dimensions and byte size as JSON. `main.ts` is a Node 22 TypeScript entrypoint that reads `entry.png` in the repository root and prints its byte size and SHA-256 hash as JSON.
